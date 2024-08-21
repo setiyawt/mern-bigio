@@ -10,26 +10,28 @@ export const getStory = async(req, res) =>{
     }
 }
 
-export const createStory = async(req, res) => {
+export const createStory = async (req, res) => {
     try {
         const { title, writer, synopsis, category, status, last_updated } = req.body;
-        const coverImagePath = req.file ? req.file.path : null; // Jika ada file upload
+        const coverImagePath = req.file ? req.file.path : null;
 
-        await Story.create({
+        const newStory = await Story.create({
             title,
             writer,
             synopsis,
+            cover_image: coverImagePath,
             category,
-            cover_image: coverImagePath, // Menyimpan path gambar
             status,
             last_updated
         });
 
-        res.status(201).send('Story created successfully.');
+        res.status(201).json({ storyId: newStory.id });
     } catch (error) {
-        res.status(500).send('Error: ' + error.message);
+        console.error('Error in createStory:', error); // Log error
+        res.status(500).json({ error: 'Failed to create story' });
     }
-}
+};
+
 
 export const updateStory = async(req, res) => {
     try {

@@ -6,10 +6,12 @@ import CategoryRoute from './routers/CategoryRoute.js';
 import KeywordRoute from './routers/KeywordRoute.js';
 import Story_ManagementRoute from './routers/Story_ManagementRoute.js';
 import StatusRoute from './routers/StatusRoute.js';
+import UploadRoute from './routers/UploadRoute.js';
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(UploadRoute); 
 app.use(StoryRoute)
 app.use(ChapterRoute);
 app.use(CategoryRoute);
