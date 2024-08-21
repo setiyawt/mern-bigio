@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "arial", sans-serif;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start; /* Optional: aligns items vertically at the start */
+  }
+  
+  .sidebar {
+    flex: 1; /* Adjust width as needed */
+    background-color: #f0f0f0; /* Optional: background color for the sidebar */
+  }
+  
+  .main {
+    flex: 9; /* Adjust width as needed */
+    margin-left: 250px; /* Optional: margin for the main content */
+    
+  }
+
+  .header {
+    margin-bottom: 100px;
+  }
+ 
+  

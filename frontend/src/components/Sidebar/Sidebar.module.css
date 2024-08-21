@@ -1,0 +1,40 @@
+.sidebar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+}
+
+.logo {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 32px;
+    width: 50%;
+    height: 50%;
+
+}
+
+.menu {
+    list-style-type: none;
+    
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.menu li {
+    margin-bottom: 10px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    
+    color: rgb(110, 109, 109);
+}
+
+.menu li:hover {
+    background-color: #3cb1ff;
+    width: 100%;
+
+}

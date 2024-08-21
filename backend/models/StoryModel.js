@@ -1,5 +1,5 @@
 import { Sequelize} from "sequelize";
-import db from "../backend/config/Database.js  ";
+import db from "../config/Database.js";
 
 const {DataTypes} = Sequelize;
 
@@ -15,7 +15,12 @@ const Story = db.define('story', {
         defaultValue: Sequelize.NOW 
     }
     
-}, {
+},  {
+    hooks: {
+        beforeUpdate: (story, options) => {
+            story.last_updated = new Date(); // Set to current date and time
+        }
+    },
     freezeTableName: true
 });
 
