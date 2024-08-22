@@ -1,4 +1,4 @@
-# Project Name
+# Storyku
 
 ## <a name="introduction"></a> Introduction :
 This project is not finish yet. I used technology like express js, axios, mysql to build the backend and react js for the frontend.
