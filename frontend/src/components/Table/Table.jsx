@@ -45,7 +45,12 @@ const Table = () => {
   }, []);
 
   return (
+    
     <div>
+      <div>
+        <h1>Story Management</h1>
+        <button onClick={() => navigate('/addstory')}>Add Story</button>
+      </div>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -69,7 +74,7 @@ const Table = () => {
                 <td>{story.keywords}</td>
                 <td>{story.status}</td>
                 <td>
-                  <button onClick={() => navigate('/addstory')}>Add Story</button>
+                  <button onClick={() => navigate('/addstory')}>Edit</button>
                   <button>Delete</button>
                 </td>
               </tr>
